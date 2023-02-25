@@ -10,6 +10,16 @@ const displayPhones = phones =>{
 
     const phoneContainer=document.getElementById('Phone-container');
     phoneContainer.innerText = '';
+    phones = phones.slice(0,3);
+    
+    const noPhone = document.getElementById('no-phone-found');
+    if(phones.length === 0){
+        noPhone.classList.remove('d-none')
+    }else{
+        noPhone.classList.add('d-none')
+    }
+
+   
     // console.log(phones);
     phones.forEach(phone =>{
         // console.log(phone)
@@ -43,5 +53,5 @@ document.getElementById('btn-search').addEventListener("click", function(){
     loadPhones(searchText)
 })
 
-loadPhones();
+// loadPhones();
 
