@@ -10,7 +10,7 @@ const displayPhones = phones =>{
 
     const phoneContainer=document.getElementById('Phone-container');
     phoneContainer.innerText = '';
-    phones = phones.slice(0,3);
+    phones = phones.slice(0,10);
     
     const noPhone = document.getElementById('no-phone-found');
     if(phones.length === 0){
@@ -42,16 +42,28 @@ const displayPhones = phones =>{
         phoneContainer.appendChild(phoneDiv);
       
         
-    })
+    });
+    toggleSpinner(false);
 }
 
 
 document.getElementById('btn-search').addEventListener("click", function(){
+    toggleSpinner(true)
     const searchField =document.getElementById('search-field');
     const searchText = searchField.value;
     console.log(searchText)
     loadPhones(searchText)
-})
+});
+
+
+const toggleSpinner = isLoading =>{
+    const loadingSection = document.getElementById('loader');
+    if(isLoading){
+        loadingSection.classList.remove('d-none')
+    }else{
+        loadingSection.classList.add('d-none')
+    }
+}
 
 // loadPhones();
 
