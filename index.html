@@ -14,9 +14,9 @@
 <body>
 
     <header>
-       <div class="container">
-        <h2>Welcome in our Phone Hunter Website</h2>
-       </div>
+        <div class="container">
+            <h2>Welcome in our Phone Hunter Website</h2>
+        </div>
     </header>
 
 
@@ -24,11 +24,11 @@
     <main class="container">
         <section>
             <div class="container">
-                <input id="search-field"  type="text" placeholder="Search Your Phone.........">
+                <input id="search-field" type="text" placeholder="Search Your Phone.........">
                 <button id="btn-search" class="btn btn-primary">Search</button>
             </div>
         </section>
-        <section >
+        <section>
 
             <!-- ==================== cards =========================== -->
             <div id="Phone-container" class="row row-cols-1 row-cols-md-3 g-4">
@@ -36,7 +36,7 @@
 
 
 
-              </div>
+            </div>
             <!-- ==================== cards =========================== -->
 
             <div id="no-phone-found" class="mt-4 d-none">
@@ -49,9 +49,17 @@
         <section id="loader" class="d-none">
             <div style="height:400px" class="d-flex justify-content-center align-items-center  text-success ">
                 <div class="spinner-border" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-              </div>
+            </div>
+
+
+        </section>
+
+        <section>
+            <div id="show-all" class="text-center d-none">
+                <button id="btn-show-all" class="btn btn-primary">Show All</button>
+            </div>
         </section>
     </main>
 
